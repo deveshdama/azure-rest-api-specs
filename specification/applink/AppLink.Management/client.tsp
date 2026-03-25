@@ -45,3 +45,17 @@ model AppLinkMemberUpdate {
   AppLinkMemberUpdate,
   "javascript,go,python,java,csharp"
 );
+
+// Client name customizations for C# to avoid generic naming collisions
+@@clientName(ProvisioningState, "AppLinkProvisioningState", "csharp");
+@@clientName(ClusterType, "AppLinkClusterType", "csharp");
+@@clientName(UpgradeMode, "AppLinkUpgradeMode", "csharp");
+@@clientName(UpgradeReleaseChannel, "AppLinkUpgradeReleaseChannel", "csharp");
+@@clientName(ConnectivityProfile, "AppLinkConnectivityProfile", "csharp");
+@@clientName(UpgradeProfile, "AppLinkUpgradeProfile", "csharp");
+@@clientName(ReleaseChannelInfo, "AppLinkReleaseChannelInfo", "csharp");
+@@clientName(VersionInfo, "AppLinkVersionInfo", "csharp");
+
+// DateTimeOffset property naming conventions
+@@clientName(UpgradeHistoryProperties.startTimestamp, "startOn", "csharp");
+@@clientName(UpgradeHistoryProperties.endTimestamp, "endOn", "csharp");
